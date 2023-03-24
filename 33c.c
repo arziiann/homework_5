@@ -41,7 +41,12 @@ int main()
 	printf("\n");
 	}
 	printf("the sum of the elements under the main diagonal of the matrix. %i", sum_matrix_elements_under_the_main_diagonal(array, rows, column));
-	free(array);
+	
+	for(int i = 0; i < rows; i++)
+        {
+                free(array[i]);
+        }
+        free(array);
 }
 
 
