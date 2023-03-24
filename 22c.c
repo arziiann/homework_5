@@ -40,13 +40,17 @@ int main()
 		}
 	printf("\n");
 	}
-	printf("the sum of the elements of the auxiliary diagonal %i", sum_matrix_auxiliary_diagonal(array, rows, column));
-	free(array);
-}
-
-
 	
-
+	printf("the sum of the elements of the auxiliary diagonal %i", sum_matrix_auxiliary_diagonal(array, rows, column));
+	
+	
+	for(int i = 0; i < rows; i++)
+        {
+                free(array[i]);
+        }
+        free(array);}
+	return 0;
+}
 
 int sum_matrix_auxiliary_diagonal(int** array, const int rows, const int column)
 {
