@@ -42,16 +42,13 @@ int main()
 		printf("\n");
 	}
 	
+	printf("The max matrix element %i", matrix_max_element(array, rows, column));
+	
 	for(int i = 0; i < rows; i++)
 	{	
 		free(array[i]);
 	}
 	free(array);
-
-
-
-	printf("The max matrix element %i", matrix_max_element(array, rows, column));
-
 	return 0;
 }
 	int matrix_max_element(int** array, const int rows, const int column)
