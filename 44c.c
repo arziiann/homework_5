@@ -42,7 +42,11 @@ int main()
 	}
 	printf("the sum of the elements above the main diagonal %i", sum_matrix_main_diagonal(array, rows, column));
 
-	free(array);
+	for(int i = 0; i < rows; i++)
+        {
+                free(array[i]);
+        }
+        free(array);
 }
 
 
